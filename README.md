@@ -2,7 +2,7 @@
 
 ## Overview of the Analysis
 
-We were asked to build a deep learning model that could predict the success of a company in securing funding from Alphabet Soup. This analysis looks at over 34,000 organizations and a multitude of factors in order to predict the investment feasibility of different organizations based on a few criteria.
+We were asked to build a deep learning model that could predict the success of a company in using funding from Alphabet Soup. This analysis looks at over 34,000 organizations and a multitude of factors to predict the investment outcomes of different organizations based on a few criteria. The plan would be to use this model in the future to assist with predicting the success of new companies with fund allocation.  
 
 ### Results
 
@@ -10,7 +10,7 @@ We were asked to build a deep learning model that could predict the success of a
 
 ##### Target Variable
 
-* IS_SUCCESSFUL
+* IS_SUCCESSFUL - Was the money used successfully
 
 ##### Feature Variables
 
@@ -28,13 +28,13 @@ We were asked to build a deep learning model that could predict the success of a
 
 * EIN
 * NAME
-* STATUS
+* STATUS - Active vs Inactive did not seem to have a significant impact on the outcome of the analysis
 
 #### Compiling, Training, and Evaluating the Model
 
 ##### Neurons, Layers, and Activation Functions Used
 
-* Neurons - 48, 
+* Neurons - 344 neurons were used. The number was determined by the number of samples divided by number of input columns multiplied by an alpha factor for the degrees of freedom. 2 was used for the alpha in this analysis.
 * Layers - 3, two hidden and one output layer
 * Activation functions - 2, Relu and Sigmoid
 
@@ -44,10 +44,16 @@ The target performance was not met, the steps taken to attempt to increase the p
 
 #### Results Summary
 
-Results can be seen below:
+Overall, we were able to increase the accuracy of the model from 70.93% to 72.55%.
 
+Pre-Optimized Model:
 
+![Pre_Optimization](https://github.com/pritchardjeff/Neural_Network_Charity_Analysis/blob/main/Pre_Optimization.PNG)
 
+Post-Optimized Model:
+
+![Pre_Optimization](https://github.com/pritchardjeff/Neural_Network_Charity_Analysis/blob/main/Post_Optimization.PNG)
 
 ##### Next steps
-I reccomend attempting a random forest model in order to determine if a similar or higher level of accuracy can be found with less resources.
+
+I recommend attempting a SVM model to determine if a similar or higher level of accuracy can be found with less resources.
